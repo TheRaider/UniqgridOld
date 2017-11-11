@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_trends"
+            android:icon="@drawable/ic_trends"
+            android:title="Trends" />
+        <item
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/ic_reports"
+            android:title="Reports" />
+    </group>
+
+    <item android:title="Personalise">
+        <menu>
+            <item
+                android:id="@+id/nav_editProfile"
+                android:icon="@drawable/nav_editprofile"
+                android:title="Edit Profile" />
+            <item
+                android:id="@+id/nav_manage_est"
+                android:icon="@drawable/ic_manage"
+                android:title="Manage Establishments" />
+
+        </menu>
+    </item>
+
+    <item android:title="Others">
+
+    <menu>
+
+        <item
+            android:icon="@drawable/info"
+            android:id="@+id/nav_about"
+            android:title="About" />
+        <item
+            android:id="@+id/nav_contactUs"
+            android:icon="@drawable/nav_contactus"
+            android:title="Contact Us" />
+
+        <item
+            android:icon="@drawable/privacy_policy"
+            android:id="@+id/nav_privacy_policy"
+            android:title="Privacy Policy" />
+
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/nav_logout"
+            android:title="Logout" />
+
+
+    </menu>
+
+
+    </item>
+
+</menu>

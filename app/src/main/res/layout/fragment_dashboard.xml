@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipetorefresh">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:nestedScrollingEnabled="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="5dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:padding="12dp"
+                            android:src="@drawable/ic_sun"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_marginLeft="5dp"
+                            android:text="Solar Energy"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1000"
+                                android:layout_marginRight="5dp"
+                                android:textStyle="bold"
+                                android:textSize="22sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="kWh"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#11000000"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_discharge"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_marginLeft="5dp"
+                            android:text="Energy Consumed"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="934"
+                                android:layout_marginRight="5dp"
+                                android:textStyle="bold"
+                                android:textSize="22sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="kWh"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="5dp"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:padding="12dp"
+                            android:src="@drawable/ic_sun_black"
+                            android:background="#00C853"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:background="#00E676"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Solar Energy"
+                                android:layout_weight="2"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="1000"
+                                    android:layout_marginRight="5dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white"
+                                    android:textSize="22sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="kWh"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"/>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="0.5dp">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:padding="12dp"
+                            android:src="@drawable/ic_discharge_white"
+                            android:background="#E64A19"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:background="#FF5722"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Energy Consumed"
+                                android:layout_weight="1"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="934"
+                                    android:layout_marginRight="5dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white"
+                                    android:textSize="22sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="kWh"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"/>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/weather_widget"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="0.5dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Savings"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="10dp"
+                                android:gravity="center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="INR 25000"
+                                    android:layout_marginRight="5dp"
+                                    android:textSize="22sp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|end"
+                                    android:text="5% of Investment"
+                                    android:layout_marginRight="5dp"
+                                    android:textColor="@color/green"/>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#11000000"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="0.5dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Co2"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="10dp"
+                                android:gravity="center_vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="512 Tonnes"
+                                    android:layout_marginRight="5dp"
+                                    android:textSize="22sp"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

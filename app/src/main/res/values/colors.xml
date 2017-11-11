@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#094ab2</color>
+    <color name="colorPrimaryDark">#063279</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="blue">#12a8e6</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="green">#26A65B</color>
+
+    <color name="pink">#fa2970</color>
+    <color name="greyQB">#CCCBC9</color>
+    <color name="greyQBIcon">#655E58</color>
+    <color name="orange">#ff6f00</color>
+
+
+
+    <color name="greySeperator">#696969</color>
+</resources>

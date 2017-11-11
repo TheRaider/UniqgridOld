@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/nsAddEst"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cdChooseOnMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:elevation="3dp"
+                        android:padding="5dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_menu"
+                                android:tint="#33000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="Search here" />
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_search"
+                                android:tint="#33000000" />
+
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <FrameLayout
+                        android:id="@+id/map_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/map"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:id="@+id/transparent_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@android:color/transparent" />
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    app:cardCornerRadius="5dp"
+                    app:contentPadding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/tvEstTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ESTABLISHMENT"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/tilEstName">
+
+                            <EditText
+                                android:id="@+id/etEstName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Name"
+                                android:inputType="none"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/tilAccountOwner">
+
+                            <EditText
+                                android:id="@+id/etAccountOwner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Account Owner"
+                                android:inputType="none"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingLeft="5dp"
+                                android:text="Segment"
+                                android:textColor="#AA000000"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
+
+                            <Spinner
+                                android:id="@+id/spSegment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp" />
+
+                        </LinearLayout>
+
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/tilSanctionedLoad">
+
+                            <EditText
+                                android:id="@+id/etSanctionedLoad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Sanctioned Load(kW)"
+                                android:inputType="none"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    app:cardCornerRadius="5dp"
+                    app:contentPadding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="LOCATION"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/tilAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <EditText
+                                    android:id="@+id/etAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Address"
+                                    android:inputType="textMultiLine"
+                                    android:maxLines="2" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/tilCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <EditText
+                                    android:id="@+id/etCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="City"
+                                    android:inputType="none"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/tilState"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp">
+
+                                <EditText
+                                    android:id="@+id/etState"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="State"
+                                    android:inputType="none"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/tilPincode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <EditText
+                                    android:id="@+id/etPincode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Pincode"
+                                    android:inputType="none|textPostalAddress"
+                                    android:maxLines="1"
+                                    android:singleLine="true" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/place_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="all"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                <TextView
+                    android:id="@+id/place_attribution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="all"
+                    android:paddingTop="12dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabForward"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:padding="5dp"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_arrow_forward"
+        app:backgroundTint="@color/colorPrimary"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,388 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.energy.uniqgrid.Trends">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_sun_black"
+                        android:background="#00C853"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:background="#00E676">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="1700"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:paddingLeft="5dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:text="kW"
+                            android:textSize="20sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_plug"
+                        android:background="#E64A19"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:background="#FF5722">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="1700"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:paddingLeft="5dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:text="kW"
+                            android:textSize="20sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#CC000000"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:text="Power Meter"
+                            />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:gravity="center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="23dp"
+                                android:src="@drawable/ic_sun_black" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 kW"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="23dp"
+                                android:src="@drawable/ic_plug" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 kW"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="#33000000"/>
+
+                    <LinearLayout
+                        xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@android:color/transparent"
+
+                        >
+
+                        <info.hoang8f.android.segmented.SegmentedGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/sgPowerMeter"
+                            android:padding="5dp"
+                            android:weightSum="2"
+                            android:background="@android:color/transparent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            segmentedgroup:sc_tint_color="?attr/colorPrimary"
+                            segmentedgroup:sc_checked_text_color="#FFFFFF"
+                            segmentedgroup:sc_border_width="2dp"
+                            segmentedgroup:sc_corner_radius="10dp"
+                            android:gravity="center">
+
+                            <RadioButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rbPowerRealtime"
+                                android:text="Realtime"
+                                android:layout_weight="1"
+                                style="@style/RadioButton"/>
+
+                            <RadioButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rbPowerToday"
+                                android:layout_weight="1"
+                                android:text="Today"
+                                style="@style/RadioButton"/>
+
+                        </info.hoang8f.android.segmented.SegmentedGroup>
+
+                        <android.support.v4.view.ViewPager
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/charts_size"
+                            android:id="@+id/vpPowerMeter"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="5dp"
+                app:contentPadding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#CC000000"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:text="Energy Meter"
+                            />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:gravity="center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="23dp"
+                                android:src="@drawable/ic_sun_black" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 kWh"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="23dp"
+                                android:src="@drawable/ic_plug" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10 kWh"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="#33000000"/>
+                    <LinearLayout
+                        xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@android:color/transparent"
+
+                        >
+
+                        <info.hoang8f.android.segmented.SegmentedGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/sgEnergyMeter"
+                            android:padding="5dp"
+                            android:weightSum="3"
+                            android:background="@android:color/transparent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            segmentedgroup:sc_tint_color="?attr/colorPrimary"
+                            segmentedgroup:sc_checked_text_color="#FFFFFF"
+                            segmentedgroup:sc_border_width="2dp"
+                            segmentedgroup:sc_corner_radius="10dp"
+                            android:gravity="center">
+
+                            <RadioButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rbEnergyToday"
+                                android:text="Today"
+                                android:layout_weight="1"
+                                style="@style/RadioButton"/>
+
+                            <RadioButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rbEnergyDaily"
+                                android:layout_weight="1"
+                                android:text="Daily"
+                                style="@style/RadioButton"/>
+                            <RadioButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rbEnergyMonthly"
+                                android:layout_weight="1"
+                                android:text="Monthly"
+                                style="@style/RadioButton"/>
+
+                        </info.hoang8f.android.segmented.SegmentedGroup>
+
+                        <android.support.v4.view.ViewPager
+                            android:layout_width="match_parent"
+                            android:layout_height="600dp"
+                            android:id="@+id/vpEnergyMeter"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</android.support.v4.widget.SwipeRefreshLayout>
